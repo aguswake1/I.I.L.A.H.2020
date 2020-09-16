@@ -11,3 +11,16 @@ C:\Users\Agustin Olano\Desktop\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompe
 C:\Users\Agustin Olano\Desktop\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.exe
 C:\Users\Agustin Olano\Desktop\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.xml
 C:\Users\Agustin Olano\Desktop\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.pdb
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\bin\Debug\Rompecabeza de 8.exe.config
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\bin\Debug\Rompecabeza de 8.exe
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\bin\Debug\Rompecabeza de 8.pdb
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\bin\Debug\Rompecabeza de 8.xml
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.vbprojAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza_de_8.Form1.resources
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza_de_8.Form2.resources
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza_de_8.Resources.resources
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.vbproj.GenerateResource.cache
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.vbproj.CoreCompileInputs.cache
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.exe
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.xml
+C:\Users\Agustin Olano\Desktop\Instituto_Industrial_Luis_A_Huergo\Desarrollo de Sistemas\Rompecabeza de 8\Rompecabeza de 8\obj\Debug\Rompecabeza de 8.pdb
