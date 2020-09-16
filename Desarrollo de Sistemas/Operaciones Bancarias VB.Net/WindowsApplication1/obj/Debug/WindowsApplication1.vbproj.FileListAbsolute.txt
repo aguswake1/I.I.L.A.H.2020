@@ -1,0 +1,86 @@
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmRegistro.resources
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form2.resources
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Agus wake\Desktop\Huergo\SANZ\TP1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmRegistro.resources
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form2.resources
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Agustin Olano\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmRegistro.resources
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.comprobante.resources
+C:\Users\Agustin Olano\Desktop\Huergo\Sanz\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.compraVenta.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.compraVenta.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.comprobante.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmRegistro.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmPFT.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmElegir.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmConfirmarPFT.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmTipoPF.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmTB.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmComprTransf.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmCONFIRMARUVA.resources
+C:\Users\Agustin Olano\Desktop\Operaciones-Bancarias-VB-.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmPFUVA.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojAssemblyReference.cache
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.compraVenta.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.comprobante.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmCONFIRMARUVA.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmElegir.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmConfirmarPFT.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmComprTransf.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmPFUVA.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmTB.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmPFT.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmTipoPF.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmLogin.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.frmRegistro.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.cache
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.CoreCompileInputs.cache
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Agustin Olano\Desktop\Desarrollo de Sistemas\Operaciones Bancarias VB.Net\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
