@@ -22,7 +22,7 @@ Partial Class Form2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEmpty = New System.Windows.Forms.Button()
         Me.btn8 = New System.Windows.Forms.Button()
         Me.btn7 = New System.Windows.Forms.Button()
         Me.btn6 = New System.Windows.Forms.Button()
@@ -31,33 +31,36 @@ Partial Class Form2
         Me.btn3 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
         Me.btn1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btn11 = New System.Windows.Forms.Button()
+        Me.btn10 = New System.Windows.Forms.Button()
+        Me.btn9 = New System.Windows.Forms.Button()
+        Me.btn15 = New System.Windows.Forms.Button()
+        Me.btn14 = New System.Windows.Forms.Button()
+        Me.btn13 = New System.Windows.Forms.Button()
+        Me.btn12 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.JugarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MezclarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.JugarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnEmpty
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(295, 249)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(60, 48)
-        Me.Button1.TabIndex = 29
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEmpty.Enabled = False
+        Me.btnEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEmpty.Location = New System.Drawing.Point(295, 249)
+        Me.btnEmpty.Name = "btnEmpty"
+        Me.btnEmpty.Size = New System.Drawing.Size(60, 48)
+        Me.btnEmpty.TabIndex = 29
+        Me.btnEmpty.UseVisualStyleBackColor = True
         '
         'btn8
         '
-        Me.btn8.BackColor = System.Drawing.Color.Red
+        Me.btn8.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn8.Enabled = False
         Me.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn8.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn8.Location = New System.Drawing.Point(295, 113)
@@ -69,7 +72,8 @@ Partial Class Form2
         '
         'btn7
         '
-        Me.btn7.BackColor = System.Drawing.Color.Red
+        Me.btn7.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn7.Enabled = False
         Me.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn7.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn7.Location = New System.Drawing.Point(209, 113)
@@ -81,7 +85,8 @@ Partial Class Form2
         '
         'btn6
         '
-        Me.btn6.BackColor = System.Drawing.Color.Red
+        Me.btn6.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn6.Enabled = False
         Me.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn6.Location = New System.Drawing.Point(124, 115)
@@ -93,7 +98,8 @@ Partial Class Form2
         '
         'btn5
         '
-        Me.btn5.BackColor = System.Drawing.Color.Red
+        Me.btn5.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn5.Enabled = False
         Me.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn5.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn5.Location = New System.Drawing.Point(41, 115)
@@ -105,7 +111,8 @@ Partial Class Form2
         '
         'btn4
         '
-        Me.btn4.BackColor = System.Drawing.Color.Red
+        Me.btn4.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn4.Enabled = False
         Me.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn4.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn4.Location = New System.Drawing.Point(295, 45)
@@ -117,7 +124,8 @@ Partial Class Form2
         '
         'btn3
         '
-        Me.btn3.BackColor = System.Drawing.Color.Red
+        Me.btn3.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn3.Enabled = False
         Me.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn3.Location = New System.Drawing.Point(209, 45)
@@ -129,7 +137,8 @@ Partial Class Form2
         '
         'btn2
         '
-        Me.btn2.BackColor = System.Drawing.Color.Red
+        Me.btn2.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn2.Enabled = False
         Me.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn2.Location = New System.Drawing.Point(124, 45)
@@ -141,7 +150,8 @@ Partial Class Form2
         '
         'btn1
         '
-        Me.btn1.BackColor = System.Drawing.Color.Red
+        Me.btn1.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn1.Enabled = False
         Me.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn1.Location = New System.Drawing.Point(40, 45)
@@ -151,89 +161,96 @@ Partial Class Form2
         Me.btn1.Text = "1"
         Me.btn1.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn11
         '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(210, 185)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(59, 48)
-        Me.Button2.TabIndex = 32
-        Me.Button2.Text = "11"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn11.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn11.Enabled = False
+        Me.btn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn11.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn11.Location = New System.Drawing.Point(210, 185)
+        Me.btn11.Name = "btn11"
+        Me.btn11.Size = New System.Drawing.Size(59, 48)
+        Me.btn11.TabIndex = 32
+        Me.btn11.Text = "11"
+        Me.btn11.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn10
         '
-        Me.Button3.BackColor = System.Drawing.Color.Red
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(124, 185)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(61, 48)
-        Me.Button3.TabIndex = 31
-        Me.Button3.Text = "10"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn10.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn10.Enabled = False
+        Me.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn10.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn10.Location = New System.Drawing.Point(124, 185)
+        Me.btn10.Name = "btn10"
+        Me.btn10.Size = New System.Drawing.Size(61, 48)
+        Me.btn10.TabIndex = 31
+        Me.btn10.Text = "10"
+        Me.btn10.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btn9
         '
-        Me.Button4.BackColor = System.Drawing.Color.Red
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(42, 185)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(61, 48)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "9"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn9.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn9.Enabled = False
+        Me.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn9.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn9.Location = New System.Drawing.Point(42, 185)
+        Me.btn9.Name = "btn9"
+        Me.btn9.Size = New System.Drawing.Size(61, 48)
+        Me.btn9.TabIndex = 30
+        Me.btn9.Text = "9"
+        Me.btn9.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btn15
         '
-        Me.Button5.BackColor = System.Drawing.Color.Red
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(210, 249)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(61, 48)
-        Me.Button5.TabIndex = 35
-        Me.Button5.Text = "15"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btn15.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn15.Enabled = False
+        Me.btn15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn15.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn15.Location = New System.Drawing.Point(210, 249)
+        Me.btn15.Name = "btn15"
+        Me.btn15.Size = New System.Drawing.Size(61, 48)
+        Me.btn15.TabIndex = 35
+        Me.btn15.Text = "15"
+        Me.btn15.UseVisualStyleBackColor = False
         '
-        'Button6
+        'btn14
         '
-        Me.Button6.BackColor = System.Drawing.Color.Red
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(126, 249)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(61, 48)
-        Me.Button6.TabIndex = 34
-        Me.Button6.Text = "14"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btn14.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn14.Enabled = False
+        Me.btn14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn14.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn14.Location = New System.Drawing.Point(126, 249)
+        Me.btn14.Name = "btn14"
+        Me.btn14.Size = New System.Drawing.Size(61, 48)
+        Me.btn14.TabIndex = 34
+        Me.btn14.Text = "14"
+        Me.btn14.UseVisualStyleBackColor = False
         '
-        'Button7
+        'btn13
         '
-        Me.Button7.BackColor = System.Drawing.Color.Red
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(42, 249)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(61, 48)
-        Me.Button7.TabIndex = 33
-        Me.Button7.Text = "13"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.btn13.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn13.Enabled = False
+        Me.btn13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn13.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn13.Location = New System.Drawing.Point(42, 249)
+        Me.btn13.Name = "btn13"
+        Me.btn13.Size = New System.Drawing.Size(61, 48)
+        Me.btn13.TabIndex = 33
+        Me.btn13.Text = "13"
+        Me.btn13.UseVisualStyleBackColor = False
         '
-        'Button10
+        'btn12
         '
-        Me.Button10.BackColor = System.Drawing.Color.Red
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(296, 185)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(59, 48)
-        Me.Button10.TabIndex = 36
-        Me.Button10.Text = "12"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.btn12.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn12.Enabled = False
+        Me.btn12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn12.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn12.Location = New System.Drawing.Point(296, 185)
+        Me.btn12.Name = "btn12"
+        Me.btn12.Size = New System.Drawing.Size(59, 48)
+        Me.btn12.TabIndex = 36
+        Me.btn12.Text = "12"
+        Me.btn12.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
@@ -241,20 +258,29 @@ Partial Class Form2
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JugarToolStripMenuItem, Me.MezclarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(398, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(398, 25)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'JugarToolStripMenuItem
+        '
+        Me.JugarToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JugarToolStripMenuItem.Name = "JugarToolStripMenuItem"
+        Me.JugarToolStripMenuItem.Size = New System.Drawing.Size(53, 21)
+        Me.JugarToolStripMenuItem.Text = "Jugar"
+        '
         'MezclarToolStripMenuItem
         '
+        Me.MezclarToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MezclarToolStripMenuItem.Name = "MezclarToolStripMenuItem"
-        Me.MezclarToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.MezclarToolStripMenuItem.Size = New System.Drawing.Size(66, 21)
         Me.MezclarToolStripMenuItem.Text = "Mezclar"
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(45, 21)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'LinkLabel1
@@ -268,11 +294,14 @@ Partial Class Form2
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Quiero disminuir el nivel de dificultad ;("
         '
-        'JugarToolStripMenuItem
+        'Button1
         '
-        Me.JugarToolStripMenuItem.Name = "JugarToolStripMenuItem"
-        Me.JugarToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.JugarToolStripMenuItem.Text = "Jugar"
+        Me.Button1.Location = New System.Drawing.Point(295, 315)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -280,16 +309,17 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
         Me.ClientSize = New System.Drawing.Size(398, 357)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn12)
+        Me.Controls.Add(Me.btn15)
+        Me.Controls.Add(Me.btn14)
+        Me.Controls.Add(Me.btn13)
+        Me.Controls.Add(Me.btn11)
+        Me.Controls.Add(Me.btn10)
+        Me.Controls.Add(Me.btn9)
+        Me.Controls.Add(Me.btnEmpty)
         Me.Controls.Add(Me.btn8)
         Me.Controls.Add(Me.btn7)
         Me.Controls.Add(Me.btn6)
@@ -309,7 +339,7 @@ Partial Class Form2
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnEmpty As Button
     Friend WithEvents btn8 As Button
     Friend WithEvents btn7 As Button
     Friend WithEvents btn6 As Button
@@ -318,16 +348,17 @@ Partial Class Form2
     Friend WithEvents btn3 As Button
     Friend WithEvents btn2 As Button
     Friend WithEvents btn1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button10 As Button
+    Friend WithEvents btn11 As Button
+    Friend WithEvents btn10 As Button
+    Friend WithEvents btn9 As Button
+    Friend WithEvents btn15 As Button
+    Friend WithEvents btn14 As Button
+    Friend WithEvents btn13 As Button
+    Friend WithEvents btn12 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MezclarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents JugarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class
