@@ -13,11 +13,12 @@
 
         Me.Hide()
         For Each boton As Button In botones
-            boton.BackColor = Color.MediumSeaGreen
+
             boton.Enabled = False
             If (boton.Name <> "btnEmpty") Then
                 numero = boton.Name.Substring(3)
                 boton.Text = numero
+                boton.BackColor = Color.MediumSeaGreen
             End If
         Next
 
@@ -131,24 +132,6 @@
         End If
     End Function
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        btn1.Text = "1"
-        btn2.Text = "2"
-        btn3.Text = "3"
-        btn4.Text = "4"
-        btn5.Text = "5"
-        btn6.Text = "6"
-        btn7.Text = "7"
-        btn8.Text = "8"
-        btn9.Text = "9"
-        btn10.Text = "10"
-        btn11.Text = "11"
-        btn12.Text = "12"
-        btn13.Text = "13"
-        btn14.Text = "14"
-        btn15.Text = "15"
-    End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
         recorrerBotones()

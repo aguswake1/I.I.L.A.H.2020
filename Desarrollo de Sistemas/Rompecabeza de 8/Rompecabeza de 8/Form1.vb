@@ -12,7 +12,7 @@
         End If
     End Function
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEmpty.Click
-
+        endgame3x3()
 
 
         'Que sucede cuando se cliquea el botón "Empty"
@@ -41,6 +41,8 @@
     End Sub
 
     Private Sub btn8_Click(sender As Object, e As EventArgs) Handles btn8.Click
+        recorrerBotones()
+        endgame3x3()
         'Que sucede cuando se cliquea el botón 8
         If btnEmpty.Text = "" Then
             btnEmpty.Text = btn8.Text
@@ -72,6 +74,8 @@
     End Sub
 
     Private Sub btn7_Click(sender As Object, e As EventArgs) Handles btn7.Click
+        recorrerBotones()
+        endgame3x3()
         'Que sucede cuando se cliquea el botón 7
         If btn8.Text = "" And btn7.Text = "8" Then
             btn8.Text = btn7.Text
@@ -98,6 +102,8 @@
     End Sub
 
     Private Sub btn6_Click(sender As Object, e As EventArgs) Handles btn6.Click
+        recorrerBotones()
+        endgame3x3()
         'Que sucede cuando se cliquea el botón 6
         If btnEmpty.Text = "" Then
             btnEmpty.Text = btn6.Text
@@ -129,6 +135,8 @@
     End Sub
 
     Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        recorrerBotones()
+        endgame3x3()
         'Que sucede cuando se cliquea el botón 5
         If btn8.Text = "" And btn5.Text = "8" Then
             btn8.Text = btn5.Text
@@ -175,6 +183,8 @@
     End Sub
 
     Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
+        endgame3x3()
+        recorrerBotones()
         'Que sucede cuando se cliquea el botón 4
         If btn7.Text = "" And btn4.Text = "7" Then
             btn7.Text = btn4.Text
@@ -211,6 +221,8 @@
     End Sub
 
     Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
+        endgame3x3()
+        recorrerBotones()
         'Que sucede cuando se cliquea el botón 3
         If btn6.Text = "" And btn3.Text = "6" Then
             btn6.Text = btn3.Text
@@ -237,6 +249,8 @@
     End Sub
 
     Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        endgame3x3()
+        recorrerBotones()
         'Que sucede cuando se cliquea el botón 2
         If btn1.Text = "" And btn2.Text = "1" Then
             btn1.Text = btn2.Text
@@ -273,6 +287,9 @@
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
+        endgame3x3()
+        recorrerBotones()
+
         'Que sucede cuando se cliquea el botón 1
         If btn2.Text = "" And btn1.Text = "2" Then
             btn2.Text = btn1.Text
@@ -299,38 +316,44 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim numero As String
+        Dim botones() As Button = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btnEmpty}
+
+
         Me.Hide()
-        btn1.BackColor = Color.MediumSeaGreen
-        btn2.BackColor = Color.MediumSeaGreen
-        btn3.BackColor = Color.MediumSeaGreen
-        btn4.BackColor = Color.MediumSeaGreen
-        btn5.BackColor = Color.MediumSeaGreen
-        btn6.BackColor = Color.MediumSeaGreen
-        btn7.BackColor = Color.MediumSeaGreen
-        btn8.BackColor = Color.MediumSeaGreen
-        btn1.Text = "1"
-        btn2.Text = "2"
-        btn3.Text = "3"
-        btn4.Text = "4"
-        btn5.Text = "5"
-        btn6.Text = "6"
-        btn7.Text = "7"
-        btn8.Text = "8"
-        btnEmpty.Enabled = False
-        btn1.Enabled = False
-        btn2.Enabled = False
-        btn3.Enabled = False
-        btn4.Enabled = False
-        btn5.Enabled = False
-        btn6.Enabled = False
-        btn7.Enabled = False
-        btn8.Enabled = False
-        btnEmpty.Enabled = False
+        For Each boton As Button In botones
+
+            boton.Enabled = False
+            If (boton.Name <> "btnEmpty") Then
+                numero = boton.Name.Substring(3)
+                boton.Text = numero
+                boton.BackColor = Color.MediumSeaGreen
+            End If
+        Next
         JugarToolStripMenuItem.Enabled = True
         Form2.Show()
 
     End Sub
+    Function endgame3x3()
+        Dim botones() As Button = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btnEmpty}
 
+        'Validación para ganar
+        Dim num As String
+        Dim cont As Integer = 0
+
+        For Each boton As Button In botones
+            num = boton.Name.Substring(3)
+            If (boton.Text = num) Then
+                cont += 1
+            End If
+        Next
+
+
+        If (cont = botones.Length - 1) Then
+            MsgBox("Felicidades!, Ganaste O.O")
+            End
+        End If
+    End Function
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         'Opción salir
         Dim salir
@@ -362,55 +385,26 @@
             listarandom.Remove(num)
         Next
 
-        If btn1.Text <> "1" Then
-            btn1.BackColor = Color.Red
-        Else
-            btn1.BackColor = Color.MediumSeaGreen
-        End If
+        recorrerBotones()
 
-        If btn2.Text <> "2" Then
-            btn2.BackColor = Color.Red
-        Else
-            btn2.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn3.Text <> "3" Then
-            btn3.BackColor = Color.Red
-        Else
-            btn3.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn4.Text <> "4" Then
-            btn4.BackColor = Color.Red
-        Else
-            btn4.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn5.Text <> "5" Then
-            btn5.BackColor = Color.Red
-        Else
-            btn5.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn6.Text <> "6" Then
-            btn6.BackColor = Color.Red
-        Else
-            btn6.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn7.Text <> "7" Then
-            btn7.BackColor = Color.Red
-        Else
-            btn7.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn8.Text <> "8" Then
-            btn8.BackColor = Color.Red
-        Else
-            btn8.BackColor = Color.MediumSeaGreen
-        End If
     End Sub
+    Function recorrerBotones()
+        Dim numero As String
+        Dim botones() As Button = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btnEmpty}
 
+        For Each boton As Button In botones
+            If (boton.Name <> "btnEmpty") Then
+                numero = boton.Name.Substring(3)
+
+                If boton.Text <> numero Then
+                    boton.BackColor = Color.Red
+                Else
+                    boton.BackColor = Color.MediumSeaGreen
+
+                End If
+            End If
+        Next
+    End Function
     Private Sub JugarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JugarToolStripMenuItem.Click
         Dim random As New Random
         Dim listarandom As New ArrayList()
@@ -434,63 +428,12 @@
             listarandom.Remove(num)
         Next
 
-        If btn1.Text <> "1" Then
-            btn1.BackColor = Color.Red
-        Else
-            btn1.BackColor = Color.MediumSeaGreen
-        End If
+        recorrerBotones()
 
-        If btn2.Text <> "2" Then
-            btn2.BackColor = Color.Red
-        Else
-            btn2.BackColor = Color.MediumSeaGreen
-        End If
+        For Each boton As Button In botones
+            boton.Enabled = True
+        Next
 
-        If btn3.Text <> "3" Then
-            btn3.BackColor = Color.Red
-        Else
-            btn3.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn4.Text <> "4" Then
-            btn4.BackColor = Color.Red
-        Else
-            btn4.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn5.Text <> "5" Then
-            btn5.BackColor = Color.Red
-        Else
-            btn5.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn6.Text <> "6" Then
-            btn6.BackColor = Color.Red
-        Else
-            btn6.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn7.Text <> "7" Then
-            btn7.BackColor = Color.Red
-        Else
-            btn7.BackColor = Color.MediumSeaGreen
-        End If
-
-        If btn8.Text <> "8" Then
-            btn8.BackColor = Color.Red
-        Else
-            btn8.BackColor = Color.MediumSeaGreen
-        End If
-
-        btn1.Enabled = True
-        btn2.Enabled = True
-        btn3.Enabled = True
-        btn4.Enabled = True
-        btn5.Enabled = True
-        btn6.Enabled = True
-        btn7.Enabled = True
-        btn8.Enabled = True
-        btnEmpty.Enabled = True
         JugarToolStripMenuItem.Enabled = False
     End Sub
 End Class
