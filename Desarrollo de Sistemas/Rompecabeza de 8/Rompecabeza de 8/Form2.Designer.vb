@@ -50,6 +50,7 @@ Partial Class Form2
         '
         Me.btnEmpty.Enabled = False
         Me.btnEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEmpty.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmpty.Location = New System.Drawing.Point(295, 249)
         Me.btnEmpty.Name = "btnEmpty"
         Me.btnEmpty.Size = New System.Drawing.Size(60, 48)
