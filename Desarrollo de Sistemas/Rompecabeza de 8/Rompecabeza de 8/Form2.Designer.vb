@@ -271,6 +271,7 @@ Partial Class Form2
         '
         'MezclarToolStripMenuItem
         '
+        Me.MezclarToolStripMenuItem.Enabled = False
         Me.MezclarToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MezclarToolStripMenuItem.Name = "MezclarToolStripMenuItem"
         Me.MezclarToolStripMenuItem.Size = New System.Drawing.Size(66, 21)

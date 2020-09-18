@@ -222,9 +222,13 @@
                 numero = boton.Name.Substring(3)
                 boton.Text = numero
                 boton.BackColor = Color.MediumSeaGreen
+            Else
+                btnEmpty.Text = ""
+                btnEmpty.BackColor = Color.White
             End If
         Next
         JugarToolStripMenuItem.Enabled = True
+        MezclarToolStripMenuItem.Enabled = False
         Form2.Show()
 
     End Sub
@@ -331,5 +335,6 @@
         Next
 
         JugarToolStripMenuItem.Enabled = False
+        MezclarToolStripMenuItem.Enabled = True
     End Sub
 End Class

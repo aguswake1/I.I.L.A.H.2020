@@ -19,10 +19,13 @@
                 numero = boton.Name.Substring(3)
                 boton.Text = numero
                 boton.BackColor = Color.MediumSeaGreen
+            Else
+                btnEmpty.Text = ""
+                btnEmpty.BackColor = Color.White
             End If
         Next
 
-
+        MezclarToolStripMenuItem.Enabled = False
         JugarToolStripMenuItem.Enabled = True
         Form1.Show()
     End Sub
@@ -58,6 +61,7 @@
 
 
         JugarToolStripMenuItem.Enabled = False
+        MezclarToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub MezclarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MezclarToolStripMenuItem.Click
