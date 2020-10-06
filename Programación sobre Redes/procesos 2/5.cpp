@@ -22,7 +22,7 @@ std::vector<std::string> split(std::string comando, std::string delimitador){
     return argumentos;
 
 
-}  
+}
 
 int main(){
     /*
@@ -32,7 +32,7 @@ int main(){
     {
         std::cout << arg[i] << std::endl;
     }*/
-    
+
     while(true){
         std::cout << "> ";
         int pid;
@@ -40,7 +40,7 @@ int main(){
         std::getline(std::cin, comando);
         std::vector<std::string> arg = split(comando, " ");
 
-        
+
 
         pid = fork();
 

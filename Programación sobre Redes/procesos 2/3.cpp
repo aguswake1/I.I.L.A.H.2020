@@ -13,7 +13,7 @@ int main()
 	{
 		std::cout << "Homero" << std::endl;
 		int pidBart = fork();
-		
+
 		if (pidBart == 0)
 		{
 			std::cout << "Bart" << std::endl;

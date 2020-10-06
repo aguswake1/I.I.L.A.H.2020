@@ -12,7 +12,7 @@ int main() {
 
 	for (int i = 0; i < numeroProcesos; ++i)
 	{
-		
+
 		if (pid == 0)
 		{
 			std::cout << "Soy " << getpid() << " Hijo de " << getppid() << " y soy de color " << (i % 2 == 0 ? "negro" : "rojo") << std::endl;
