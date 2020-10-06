@@ -1,0 +1,87 @@
+Trabajo Práctico de Seguridad y UNIX
+Administración de Sistemas y Redes
+2020-09-25
+Agustin Olano
+===
+
+ Contestá de manera individual cada uno de los siguientes items, usando tus
+ palabras, como si fuera una respuesta que darías en persona.
+
+ Entrega via Classroom, antes de las 23:59 hs del viernes 2 de octubre (de 2020)
+
+ Formato de la entrega: archivo de texto plano (como éste del enunciado)
+
+===
+
+[A]
+
+    Para cada uno de los niveles de la máquina virtual Nebula de Exploit Exercises
+    que vimos, contá brevemente la situación que se presentaba y en qué consiste la
+    "explotación" de la vulnerabilidad que encontraste. Luego, sugerí cómo harías
+    para mejorar la seguridad de una situación así.
+
+    En caso de no haber resuelto el nivel completamente, contá las partes que
+    hayas entendido o resuelto.
+
+    [level00] La situación era que tenemos que usar el SUID para correr con permisos de root el flag00 y luego utilizar el getflag. Lo primero que haciamos es utilizar el comando find con parámetros para encontrar archivo con SUID y permisos que pertenecen al grupo usuario y filtrabamos los errores con el número dos y usando grep para obtener coincidencias con la "cadena de texto que le pasamos":  find / -perm /u+s 2>error | grep flag luego vamos a la ruta indicada y ejecutamos getflag obteniendo una respuesta de exito.
+
+    [level01] La situación era que existía una vulnerabilidad en el programa del source code que escribía la ejecución de "echo" en la variable de entorno del sistema y nosotros creando un programa en c (int main(){system("/bin/bash")}) (con sus respectivas librerias importadas) que se llame echo.c y luego generando un ejecutable del mismo podíamos engañar al sistema e ingresar lo que quisieramos. 
+
+    [level02] La situación era que en el programa del source code tenía la vulnerabilidad de que se llama a la función system con un string que depende de la variable de entorno USER. Cuando haciamos una inyección de código a la variable USER cambiandolo por ';/bin/bash;' (los puntos y coma son para separar de los comandos que existian en la variable buffer). Luego poniendo ./flag02 accedemos al SUID y utilizamos getflag.
+
+    [level03] La situación era que existe un cron que recorre el directorio writable.d, ejecuta todo lo que puede ejecutar, y luego lo borra. Leemos el archivo writable.sh nos damos cuenta que ejecuta el archivo que esté en el directorio writable.d y luego lo elimina, debemos crear un programa en C en la carpeta tmp porque todos los usuarios pueden leer y escribir ahí.(incluyo librerias stdio.h sys/type.h y unistd.h) | gid_t gid = 0 ; uid_t uid = 0; setresgid(gid, gid, gid); setresuid(guid,guid,guid); system("/bin/bash");| la función setresuid suplanta el id de usuario que ejecuta el proceso por el que le indiquemos por parámetro, y el setresgid hace lo mismo pero con el grupo. Luego creamos un script de bash en el writable.d que compila el programa en C de tmp y ubica el ejecutable en el home de flag03 y le da permisos para que cualquier usuario pueda ejecutarlo como si fuese flag03 y luego esperamos cronjob se ejecute y luego ejecutamos el resultado de la compilación del programa en C y luego hacemos getflag.
+
+    [level04] La situación era que no podemos leer el archivo token, flag04 al ejecutar funciona como un lector de texto pero no lee token porque el mismo código lo prohibe. Para resolverlo creamos un symlink soft en /tmp que apunte al archivo token. Esto funciona porque el código sólo compara con la palabra "token". Usamos flag04 para leer el symlink y este nos da una clave que resulta ser la contraseña de flag04. Iniciamos sesión como flag04 y ejecutamos getflag.
+
+    [level05] La situación era que hay llaves ssh en un archivo comprimido (.tgz) en una carpeta llamada .backup en el home de flag05 que la podíamos hallar con el comando "ls -la", pero no tenemos permiso para descomprimir el archivo dentro de esa capeta. La carpeta /home/level05 si tiene permisos de escritura y nos conviene poner la carpeta .ssh allí, para hacer esto descomprimimos el archivo en /home/level05 (tar xvzf backup -C /home/level05 ) la C es para indicar el directorio destino. Finalmente hacemos ssh hacía flag05 (ssh flag05@localhost)y ejecutamos getflag.
+
+    [level06] La situación era que teníamos que hallar credenciales de un sistema unix viejo o "legacy". En este caso la contraseña de flag06 se encontraba encriptada en /etc/passwd y con el comando grep la encontramos. Luego con john the ripper instalado, la craqueamos (utilizando un archivo de texto) y luego obteniendo "hello" usamos su flag06 y la escribimos, luego estando en sh-4.2 ejecutamos getflag.
+
+    [level07] La situación era que se encontraba un servidor web levantado por thttpd que hace ping a otros hosts para ver si están disponibles. La vulnerabilidad está en que el programa en Perl combina lo que ingresa el usuario con el comando ping, haciendo que un usuario malicioso pueda inyectar código. En este caso vimos que el servidor web se estaba ejecutando en el puerto 7007 al leer el archivo thttpd.conf además dentro del mismo se puede ver que el propietario del servicio es flag07. Teniendo esto en cuenta se le mandó una petición al servidor con wget de la siguiente forma: "wget http://localhost/index.cgi?Host=%3Bgetflag" (%3B representa ';' para URLs) con esto logramos ejecutar getflag como el usuario flag07
+
+    [level08 (era opcional)]
+
+    [level12]
+
+    [level17]
+
+Mejoras de seguridad:
+
+level00: cuidar los permisos para programas que tiene SUID
+level01: utilizar /bin/echo en lugar de echo
+level02: no involucrar variables de entorno con el comando system de C
+level03: cuidar permisos de los directorios
+level04: no almacenar contraseña en archivo de texto
+level05: no permitir acceso de lectura al grupo o a otros para contenido delicado del usuario
+level06: mantener actualizadas las mejoras de seguridad. Evitar legacy.
+level07: no involucrar entradas del usuario directamente con código del sistema.
+
+
+[B]
+
+    Explicá brevemente cada uno de los siguientes conceptos y las consideracionesexit
+    que estén relacionadas a temas de seguridad del sistema operativo, es decir qué
+    problemas de seguridad pueden surgir de usarlos sin cuidado y cómo los puedo evitar.
+
+    [Set UID] Es un tipo de permisos especiales de un archivo. Permite a otros usuarios ejecutar un archivo con los permisos del propietario del archivo.
+
+    [Variables de entorno] Es un valor que se encuentra en la memoria que puede ser ejecutado por diferentes programas y por eso una ruta determinada con ejecutables o archivos relevantes se encuentran grabadas en una variable de entorno. Con respecto a la seguridad al cambiar estas variables puede generar una gran vulnerabilidad ya que la ruta redireccionada puede ser un trampa para el perjucio del usuario.
+
+    [PATH] Es una de las variables de entorno más importantes, informa a las shell donde se encuentrar los programas binarios que se pueden ejecutar en el sistema sin la necesidad de llamarlos por la ruta específica. Por ejemplo si utilizamos un comando como ls en una terminal, el SO sabe donde está el binario para ejecutarlo gracias a la variable PATH.
+
+
+    [cron] Es un servicio que ejecuta comandos en segundo plano y su ejecución está agendada, es decir se setea la fecha en la que actua.
+
+    [symlinks (enlaces simbólicos)] Los symlinks vendrían a ser como accesos directos para SOs basados en Unix. Tenemos los soft y los hard. Los hard link hacen referencia a la dirección en memoria donde se encuentra el archivo y el soft link hace referencia al nombre del archivo el cual lleva a la dirección en memoria.
+
+    [Permisos en backups] Las listas de control de acceso (ACL) permite dar permisos para cualquier usuario o grupo a cualquier recurso del disco. 
+
+    [Autenticación via par de claves con SSH] no usar contraseñas para ingresar via ssh, sino, llaves encriptadas y un protocolo previo en el que ambos usuarios intercambian sus llaves
+
+    [/etc/passwd y su relacion con /etc/shadow] shadow guarda las contraseñas bien encriptadas y passwd delega las contraseñas a shadow.
+
+    [Inyección de comandos] Es un exploit de una vulnerabilidad con el objetivo de ejecutar  un archivo dañino tratando de obtener datos de un usuario, ya sean claves o datos y archivos privados. Generalmente se utiliza con SQL, pero en Nebula lo usamos por ejemplo en el level02 para cambiar el valor de una variable de entorno. 
+
+    [pickle] Guarda identificadores y configuraciones, es un módulo importante cuando se necesita persistencia entre distintas sesiones de usuarios. Pickle permite que se guarden objetos de Python entre procesos. Permite la serialización y des-serialización de la estructura de un objeto de Python.
+
+===

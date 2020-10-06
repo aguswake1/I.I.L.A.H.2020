@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/cygwin64/lib/gcc/x86_64-pc-cygwin/9.3.0/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:/cygwin64/bin/g++.exe",
+            "cppStandard": "c++20"
+        }
+    ],
+    "version": 4
+}
