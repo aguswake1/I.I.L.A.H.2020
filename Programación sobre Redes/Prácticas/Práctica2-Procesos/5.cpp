@@ -27,13 +27,6 @@ vector<string> split(string comando, string delimitador){
 }
 
 int main(){
-    /*
-    string s = "hola chao vaso nene flor";
-    vector<string> arg = split(s, " ");
-    for (size_t i = 0; i < arg.size(); i++)
-    {
-        cout << arg[i] << endl;
-    }*/
 
     while(true){
         cout << "> ";
@@ -42,15 +35,15 @@ int main(){
         // Parte 1: Procesamiento de datos.
         string comando;
         getline(cin, comando);  // Usamos getline para obtener toda la línea. cin lee hasta el primer espacio, salto de línea (\n) o fin de archivo que consigue.
-        vector<string> arg = split(comando, " ");
+        vector<string> arg = split(comando, " ");  // Se almacena en un vector de strings los comandos con sus parámetros por separado.
 
         // Parte 2: Retrocompatibilidad con C.
-        const char** argumentos = new const char*[arg.size()];
+        const char** argumentos = new const char*[arg.size()];  // Reservamos espacio dinámicamente con el tamaño de arg
         // const char** argumentos = (const char**) malloc(sizeof(const char*) * arg.size());
 
         for(size_t i = 0; i < arg.size(); i++)
         {
-            argumentos[i] = arg[i].c_str();
+            argumentos[i] = arg[i].c_str();  // Le pasamos los elementos de arg a argumentos pero conteniendolos como strings de C
         }
 
         // Parte 3: Ejecutar.
@@ -59,18 +52,14 @@ int main(){
 
         pid = fork();
 
-        if(pid == 0){ // hijo
+        if(pid == 0){
             execvp (argumentos[0], (char* const*)argumentos);
             exit(0);
-        }else{ // padre
+        }else{
             wait(NULL);
         }
     }
     return 0;
 }
 
-//cout << comando << endl;  substr + find
 // int execvp(const char* comando, char* const argv[])
-// ls -a -l
-// execvp("ls", {"ls", "-a", "-l"})´
-// strtok(char* inicio, char delimitador);
