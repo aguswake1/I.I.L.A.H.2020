@@ -1,2 +1,2 @@
-admin,admin,44157901,agus@hotmail.com,admin,admin
-GALO,GUARDIA,43322657,gguiardia@ddds.com,ggalu,Hola1234
+admin,admin,43155910,agus@hotmail.com,admin,admin
+Pepe,García,43352387,ggpepe@ddds.com,user1,Hola1234
