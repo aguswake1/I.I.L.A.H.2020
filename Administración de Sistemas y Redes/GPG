@@ -1,0 +1,14 @@
+Instalar GnuPG:
+sudo apt install gnupg
+
+Generar par de claves GPG:
+gpg  --gen-key
+
+Importar una clave pública:
+gpg --import
+<ingresamos clave pública y ademas y luego ctrl + D>
+- Certificar la clave implica firmar un mensaje que representa "yo mismo confío en que esta clave pública es correcta. atentamente: yo"
+gpg --lsign-key XXXXXXXXXXXXXXXX (número Hexadecimal)
+
+Encriptar mensaje:
+gpg -e -a -r XXXXXXXXXXXXXXXX   	o           gpg --armor --encrypt --recipient XXXXXXXXXXXXXXXX
