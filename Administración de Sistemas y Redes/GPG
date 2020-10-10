@@ -12,3 +12,12 @@ gpg --lsign-key XXXXXXXXXXXXXXXX (número Hexadecimal)
 
 Encriptar mensaje:
 gpg -e -a -r XXXXXXXXXXXXXXXX   	o           gpg --armor --encrypt --recipient XXXXXXXXXXXXXXXX
+
+Exportar clave publica:
+gpg --armor --export mail > mykey.asc
+esto genera un archivo mykey.asc
+
+Firmar un archivo:
+gpg --sing archivo
+genera un archivo .gpg
+
