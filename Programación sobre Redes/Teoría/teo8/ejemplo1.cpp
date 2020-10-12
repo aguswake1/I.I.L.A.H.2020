@@ -3,13 +3,12 @@
 #include <thread>
 #include <vector>
 
-
 using namespace std;
 
 void primer_thread()
 {
     cout << "Mi primer thread!" << endl;
-    
+
     // Ojo con esto! Si hacemos exit, como con los procesos, estamos matando a todos
     // los threads dentro del proceso, incluído el thread principal
 
@@ -17,14 +16,15 @@ void primer_thread()
     return;
 }
 
+int main()
+{
 
-int main() 
-{ 
-   
-    thread th = thread(primer_thread); 
+    thread th = thread(primer_thread);
+
+    cout << "Thread principal" << endl;
 
     // Importante! Si no hacemos join para esperar al thread creado, habrá problemas
     th.join();
 
     cout << "Listo, a otra cosa" << endl;
-} 
+}
