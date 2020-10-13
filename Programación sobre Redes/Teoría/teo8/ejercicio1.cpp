@@ -28,6 +28,4 @@ int main()
       threads[index].join();
       index++;
    }
-
-   cin.get();
 }
