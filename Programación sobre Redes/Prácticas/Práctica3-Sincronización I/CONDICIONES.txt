@@ -1,2 +1,0 @@
-Solo tienen que entregar hasta el ejercicio 4 (incluído). De todas formas, les recomiendo fuertemente que hagan los niveles  mencionados en "The deadlock empire" (ejercicio 5). De hecho, si se pelean mucho con los primeros,  pueden usar este como una forma de ganar intuición y luego volver.
-IMPORTANTE: Como siempre, todes deberían hacer la entrega. Pero solo voy a corregir los que seleccioné al azar. Si alguien quiere que revise el suyo, por la razón que sea, me avisa. No hay problema

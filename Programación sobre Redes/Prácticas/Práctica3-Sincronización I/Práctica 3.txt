@@ -1,0 +1,45 @@
+race conditions --> se refiere a cuando hay una condición de carrera, y el resultado de una operación depende del orden de ejecución de instrucciones.
+   data races --> Es una situación en la que al menos 2 threads intentan acceder a la misma memoria compartida y al menos una intenta modificarla.
+
+1. 
+   El valor final para x puede ser tanto 7 como 5, depende del orden de ejecución porque hay concurrencia.
+   los caminos posibles son:
+	x=5 --> x=7 --> print(x)
+	x=7 --> x=5 --> print(x)
+	x=5 --> print(x) --> x=7
+  Hay race condition porque hay una carrera por el valor de x, si será 7 o 5 (dependerá de que se ejecute primero)
+  data race porque ambos tratan de modificar el valor de la misma variable concurrentemente.
+
+2.
+El valor final de x es igual a 2, independientemente del orden de ejecución de los threads porque ambos le suman lo mismo a la variable.
+No hay race conditions porque no hay un resultado que dependa del orden de ejecución, pero si hay una data race porque hay threads escribiendo el valor de x en la memoria compartida de forma concurrente.
+
+3.
+llamemos A: for(int i = 0;i<2;i++) 	  llamemos B: for(int i = 0; i<2;i++)
+		x = x + 2 			          x = x - 1
+
+
+minimo --> -2 --> esto se puede llegar a dar si sucede lo siguiente:
+
+ciclo 1 y 2 en B
+LecturaAx, LecturaBx, EscrituraAx, EscrituraBx
+Al esto suceder concurrentemente, puede pasar que el valor resultante de A sea sobrescrito por el valor resultante de B, y si esto sucede 2 veces por el ciclo for, el valor de x será igual a -2
+
+
+maximo --> 4 --> esto se puede llegar a dar si sucede lo siguiente:
+
+ciclo 1 y 2 en A
+LecturaBx, LecturaAx, EscrituraBx, EscrituraAx
+Al esto suceder concurrentemente, puede pasar que el valor resultante de B sea sobrescrito por el valor resultante de A, y si esto sucede 2 veces por el ciclo for, el valor de x será igual a 4
+
+Es posible que el valor resultante de x sea igual a 0 si sucede lo siguiente:
+
+1er ciclo de A y B
+LecturaAx, LecturaBx, EscrituraAx, EscrituraBx --> X = -1
+
+2do ciclo de A y B
+LecturaAx, EscrituraAx --> X = 1 --> LecturaBx, EscrituraBx --> |X = 0|
+
+4. 
+Si ocurre (al igual que en el punto anterior) un sobreescritura de valor en la variable X porque se encuentra en un espacio de memoria compartida entre dos threads, puede ocurrir que su valor
+mínimo sea de 100, y su valor máximo de 200.
