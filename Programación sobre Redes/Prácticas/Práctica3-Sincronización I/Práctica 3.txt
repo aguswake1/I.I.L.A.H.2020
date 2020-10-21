@@ -1,4 +1,4 @@
-race conditions --> se refiere a cuando hay una condición de carrera, y el resultado de una operación depende del orden de ejecución de instrucciones.
+﻿race conditions --> se refiere a cuando hay una condición de carrera, y el resultado de una operación depende del orden de ejecución de instrucciones.
    data races --> Es una situación en la que al menos 2 threads intentan acceder a la misma memoria compartida y al menos una intenta modificarla.
 
 1. 
@@ -43,3 +43,6 @@ LecturaAx, EscrituraAx --> X = 1 --> LecturaBx, EscrituraBx --> |X = 0|
 4. 
 Si ocurre (al igual que en el punto anterior) un sobreescritura de valor en la variable X porque se encuentra en un espacio de memoria compartida entre dos threads, puede ocurrir que su valor
 mínimo sea de 100, y su valor máximo de 200.
+
+6. Que una instrucción sea átomica a nivel hardware, se refiere a que para el procesador puede haber operaciones que se ejecutan de manera indivisible, es decir, no se entra en detalle ni de escritura ni de lectura.
+Por lo tanto para los ejercicios 2-3-4 se solucionaría el problema de data racing.

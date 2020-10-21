@@ -1,0 +1,47 @@
+
+Trabajo Práctico de Hashes
+Administración de Sistemas y Redes
+2020-10-20
+
+===
+
+ Contestá de manera individual cada uno de los siguientes items, usando tus
+ palabras. Algunas preguntas podrían requerir investigación o consultar en clase.
+
+ Entrega via Classroom, antes de las 23:59 hs del viernes 30 de octubre (de 2020)
+
+ Formato de la entrega: archivo de texto plano
+
+===
+
+   1- ¿Qué es una función hash?
+
+   2- ¿Qué propiedades debe tener una función hash para considerarla buena
+   para criptografía?
+
+   3- ¿Qué es una colisión de hash? ¿Por qué no es aconsejable usar MD5 en
+   ningún caso?
+
+   4- Al calcular el hash del contenido de un archivo se obtiene un
+   “checksum” o “fingerprint” del mismo. Por ejemplo, al descargar imágenes
+   de instalación de Ubuntu tenemos disponible el checksum SHA256 del
+   archivo a descargar.  ¿Para qué sirve este checksum de un archivo?
+
+   5- ¿Cuál es la diferencia entre un checksum de un archivo y una firma
+   digital sobre el mismo?
+
+   6- ¿Qué es un "Merkle tree"? ¿En qué aplicaciones se lo encuentra?
+
+   7- ¿Cómo funciona el método "Diffie-Hellman" para establecer claves?
+   (explicar sus requisitos y resultados, sin entrar en detalles en la
+   matemática)
+
+   8- ¿En qué consiste un ataque "man-in-the-middle"?
+
+   9- ¿Qué es el "código de seguridad" que usan algunas aplicaciones móviles
+   (por ejemplo WhatsApp o Telegram) para conversaciones encriptadas
+   "end-to-end"? ¿Para qué sirve verificarlo? ¿Qué significa si no coinciden
+   los códigos que salen en cada uno de los lados de la conversación?
+
+   10- ¿Qué es un sistema "proof-of-work"? ¿Cómo funciona "Hashcash" para
+   prevenir el spam? (ver hashcash.org)
