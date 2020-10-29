@@ -18,6 +18,6 @@ gpg --armor --export mail > mykey.asc
 esto genera un archivo mykey.asc
 
 Firmar un archivo:
-gpg --sing archivo
+gpg --sign archivo
 genera un archivo .gpg
 

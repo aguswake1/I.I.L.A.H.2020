@@ -1,0 +1,119 @@
+Trabajo Práctico de Protocolos de Transporte
+Administración de Sistemas y Redes
+2020-07-01
+
+===
+
+ Contestá individualmente las siguientes preguntas con tus palabras, como si
+ fuera una respuesta que darías en persona.
+
+ Entrega via Classroom, antes de las 23:59 hs del viernes 3 de julio (de 2020)
+
+===
+
+[1]
+     Se analiza una conexión entre dos equipos en Internet, formada por varios nodos y enlaces que los unen.
+
+     (1.1)
+           ¿Qué es la latencia de un enlace entre dos nodos?
+	
+	- Tiempo que tarda una información (paquete) en llegar de una computadora a otra.
+
+     (1.2)
+           ¿Qué representa el ancho de banda?
+
+	- La cantidad máxima de información que un enlace puede transmitir, existen dos anchos de banda independientes, el de recepción y el de transmisión.
+
+
+     (1.3)
+           ¿Cómo se obtiene la latencia total? (combinada a lo largo de cada uno de los enlaces)
+
+	- La suma de las latencias entre cada uno de los enlaces del camino de comunicación entre los dos nodos que se comunican, y la congestión de los enlaces. La mejor forma de medir la latencia es a través de un ping.
+
+     (1.4)
+           ¿Como se combinan los anchos de banda de cada enlace intermedio para obtener el ancho de banda general de la conexión?
+	
+	- El ancho de banda general de la conexión está determinado por el enlace intermedio mas lento.
+
+[2]
+     Considerando los protocolos TCP y UDP:
+
+     (2.1)
+           Mencionar entre 2 y 5 protocolos de la capa de aplicación que estén implementados sobre ellos.
+
+	- DNS, HTTP, HTTPS, Skype protocol, Network Time Protocol (NTP)
+
+     (2.2)
+           Describir las diferencias principales entre ambos.
+
+	- TCP envía paquetes en orden debido al "sequence number" del header de los paquetes. En UDP el orden de los paquetes pueden llegar mezclados.
+          En TCP debido a la ventana de congestión, si un envio de paquete falla este es capaz de reenviar el paquete, en cambio UDP no tiene forma de saber si se pierden datos.
+
+[3]
+     Describir los campos más importantes de los encabezados de los paquetes de los siguientes protocolos:
+
+     (3.1)
+           IP
+
+	- Version: determina la versión del protocolo utilizado para IP, exiten dos versiones, ipv4 | ipv6
+	- TTL (Time-To-Live): Este valor del protocolo lo que hace es establecer un contador para un paquete, si unas redes internas estan mal configuradas entre si, de manera tal que el paquete nunca puede llegar a destino, el
+	  paquete se muere debido a que cada salto que realiza se le descuenta el valor en uno, y al llegar a cero este paquete se descarta y el paquete que se envíó no llega a destino.
+	  También puede ocurrir que un paquete estaba programado para que llegue rapidamente a destino, y debido a la congestion de un enlace se debe elegir otra ruta, y como está ruta tarda mas, es decir, el paquete debe realizar
+ 	  mas saltos, posiblemente contador del TTL llegue a cero antes de que el paquete llegue a destino, y por lo tanto se descarte.
+	- Size: tamaño del paquete
+	- Protocol: que protocolo se encuentra dentro (TCP o UDP)
+	- Checksum: detección de errores
+	- Source address es la dirección de origen en la que se envía el paquete.
+	- Destination Address: dirección de destino que recibe el paquete.
+
+
+     (3.2)
+           UDP
+
+	- Source port: Varias aplicaciones con UDP funcionando a la vez en la pc emisora
+	- destination port: Varias aplicaciones con UDP funcionando a la vez en la pc receptora
+	- length: tamaño del paquete
+	- Checksum: corrección de errores, comprueba si lo que se envía es igual a lo que se recibió.
+
+
+     (3.3)
+           TCP
+
+	- Sequence number: número de secuencia de envío.
+	- source port number: a cada aplicación le asigna un puerto diferente a varias aplicaciones funcionando a la vez en la pc emisora 
+	- destination port number: a cada aplicación le asigna un puerto diferente a varias aplicaciones funcionando a la vez en la pc receptora
+	- Flag ACK: valor true o false, indica que el paquete es una confirmación.
+	- SYN: quiero abrir una conexión
+	- Windows size: el espacio libre que existe en el receptor
+	- checksum: control de errores
+
+
+
+[4]
+     Teniendo constantemente presente tantas conexiones persistentes trabajando conectadas por TCP:
+
+     (4.1)
+           Explicar brevemente cómo hace TCP para proveer la abstracción de una conexión confiable y ordenada sobre una red IP.
+
+	- Como las cosas se pueden perder en el camino, lleva un registro (ventana de congestión) de lo que se envía, pide confirmación de recepción, en caso de que el transmisor no reciba  la confirmación, el transmisor
+	  reenvía la información (esto para conexión confiable). Para esta ser ordenada, los paquetes enviados por TCP están ordenamos mediante un header que contiene el número de orden del paquete.
+
+     (4.2)
+           ¿Cuál es la diferencia entre la ventana de congestión (cwnd) y la ventana de recepción (rwnd)?
+
+	- Ventana de congestión es como el conjunto de paquetes “en vuelo” que TCP envia sin confirmación (si esto no ocurriera, y un enlace tuviera menor ancho de banda que otro, se podría saturar la red, generando
+	  una pérdida de datos). 
+
+	- Ventana de recepción es un espacio de memoria en el receptor del SO que guarda los paquetes que se recibieron, pero que la aplicación todavía no procesó.
+
+	- Si bien ambas son conjuntos de paquetes, se le llama ventana de congestión a los paquetes que uno envía y el receptor no los llega a confirmar, ventanas de recepción son los paquetes que se reciben, pero que
+ 	  la aplicación no procesó.
+	
+
+
+     (4.3)
+           ¿Qué rol cumple la pérdida de paquetes en los mecanismos de control de congestión de TCP?
+
+	- La pérdida de paquetes lo que hace es establecer el tamaño máximo de la ventana de congestión, si se pierden datos TCP disminuye la cantidad de datos que envían por segundo.
+
+===
