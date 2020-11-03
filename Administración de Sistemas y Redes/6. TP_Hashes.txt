@@ -1,0 +1,94 @@
+
+Trabajo Práctico de Hashes
+Administración de Sistemas y Redes
+2020-10-20
+
+===
+
+ Contestá de manera individual cada uno de los siguientes items, usando tus
+ palabras. Algunas preguntas podrían requerir investigación o consultar en clase.
+
+ Entrega via Classroom, antes de las 23:59 hs del viernes 30 de octubre (de 2020)
+
+ Formato de la entrega: archivo de texto plano
+
+===
+
+   1- ¿Qué es una función hash? 
+
+	- Es una función que tiene como objetivo ser indecifrable/irreversible, recibe una cadena como entrada y a través de cálculos matemáticos,  devuelve una cadena alfanumérica de longitud usualmente fija.  
+
+   2- ¿Qué propiedades debe tener una función hash para considerarla buena para criptografía?
+	
+	- Las propiedades que debería tener una función de hash para considerarse buena para la criptografía sería, ser unidireccional, es decir, que de su valor de entrada no se pueda obtener a partir de la salida.
+	  También es una buena propiedad que a partir de pequeños cambios en la entrada se generen grandes cambios en la salida, es decir, no aparente relación alguna la salida con la cantidad ni con los caracteres mismos de la entrada. 
+	  Que sea determinista es una buena propiedad, ya que, a partir de una entrada se genera siempre la misma salida.
+	  Tiene que ser eficiente porque de lo contrario no se podría utilizar en situaciones reales.
+	  Debe ser resistente a colisiones, la probabilidad de que esto ocurra debe tender a nulo.
+
+   3- ¿Qué es una colisión de hash? ¿Por qué no es aconsejable usar MD5 en ningún caso?
+
+	- La colisión de hash es una situación en la que a partir de entradas diferentes se genera la misma salida. No es recomendable porque tiene poca resistencia a colisiones.
+	  Por estos motivos es inseguro, al realizar hashes hay mas probabilidades de corresponder a dos claves distintas.
+
+   4- Al calcular el hash del contenido de un archivo se obtiene un “checksum” o “fingerprint” del mismo. Por ejemplo, al descargar imágenes de instalación de Ubuntu tenemos disponible el checksum SHA256 del
+      archivo a descargar.  ¿Para qué sirve este checksum de un archivo?
+
+	- Sirve para validar la integridad del archivo que descargaste. Esto quiere decir que es importante verificar que el archivo deseado sea el que hayamos descargado, comparamos el checksum del archivo que se encuentra en nuestra
+ 	  pc con el que queriamos descargar, si coinciden quiere decir que todo salió correctamente y que podemos proceder a instalarlo/ejecutarlo, de no ser así puede deberse a dos motivos, o el archivo se encuentra infectado por un
+    	  atacante o se encuentra corrupto y debemos descargarlo de otra fuente nuevamente.
+
+
+   5- ¿Cuál es la diferencia entre un checksum de un archivo y una firma digital sobre el mismo?
+
+	- La firma digital es un tipo de checksum en el que además de verificar la integridad del archivo, también respaldamos la autenticidad del mismo mediante algún método para reconocer la firma del autor/creador.
+
+   6- ¿Qué es un "Merkle tree"? ¿En qué aplicaciones se lo encuentra?
+
+	- Es una estructura de datos de tipo de arbol en la que las hojas representan el conjunto de datos y la raiz el hash del conjunto. Desde las hojas hasta la raiz se hashean los datos de a pares multiples veces.
+	  Aplicaciones/usos:
+	  Bitcoin --> Es un ejemplo debido a que cada nodo de blockchain corresponde a un dato del merkle tree que será hasheado.
+	  Bases de Datos --> mantener sincronizada la información de dos o mas DB, y detectar inconsistencias entre las mismas.
+
+
+   7- ¿Cómo funciona el método "Diffie-Hellman" para establecer claves? (explicar sus requisitos y resultados, sin entrar en detalles en la matemática)
+
+
+	- El método Diffie-Hellman se basa en la comunicación entre distintas entidades por un medio inseguro, tratan de obtener una llave secreta común. Esto se logra mediante exponenciación modular.
+	  Desde un ángulo más abstracto, utilizando el ejemplo de Bob y Alice, son dos personas que se comunican por primera vez, ¿Cómo establecen un canal seguro en un medio inseguro? de manera 
+	  simplificada, Alice recibe una clave de Bob que involucra datos de conocimiento público y un dato privado de Bob. Bob recibe lo mismo pero de Alice. Cuando ambos combinan su dato privado
+	  con el que recibieron, producen una llave común para comunicarse. En el medio inseguro se puede encontrar un atacante, llamemoslo Clark, Clark no puede obtener la llave privada ni de Alice ni de Bob,
+	  la única información que puede obtener de los dos es lo que se encuentre en el espacio público, y trayendo el ejemplo de los colores, sabiendo el "color" público de cualquiera de los dos, o sabiendo
+	  el color resultante de la mezcla de la llave privada con la pública de cualquiera de los dos, aun así no puede saber la clave privada, uno pensaría que con estos datos podría averiguar la llave privada, pero
+	  la realidad es que hay muchas tonalidades/intensidades de colores, con lo que no se averiguaría con exactitud.
+
+	  Fuente: https://www.youtube.com/watch?v=NmM9HA2MQGI&t=67s
+
+   8- ¿En qué consiste un ataque "man-in-the-middle"?
+
+	El atacante se coloca entre dos entidades para leer, modificar o redirigir los datos que se transmiten entre las dos partes.
+
+	Paso 1 --> cuando una víctima solicita una página web, la solicitud se dirige a la computadora del actor de la amenaza
+	Paso 2 --> la computadora del actor de la amenaza recibe la solicitud y recupera la página real del sitio web legítimo
+	Paso 3 --> el actor de amenazas puede alterar la página web legítima y realizar cambios en los datos.
+	Paso 4 --> el actor de la amenaza reenvía la página solicitada a la víctima.
+
+   9- ¿Qué es el "código de seguridad" que usan algunas aplicaciones móviles (por ejemplo WhatsApp o Telegram) para conversaciones encriptadas "end-to-end"? ¿Para qué sirve verificarlo? ¿Qué significa si no coinciden
+   los códigos que salen en cada uno de los lados de la conversación?
+
+	- El código de seguridad que tienen estas aplicaciones de mensajería funcionan como verificadores de que el contenido distribuido (por el emisor) por un canal de comunicación determinado, sea recibido por el receptor deseado
+	  por una persona que tenga el mismo código. Si verificamos que el "código de seguridad" del emisor, coincida con el del receptor, certificamos que los mensajes que se estan transmitiendo, son generados y 
+	  leídos solamente por estas entidades.
+	  Si no coinciden significa o bien que el chat que estan viendo es distinto, o que los mensajes estan siendo intervenidos por un tercero.
+	  
+	  Fuente: https://www.youtube.com/watch?v=jkV1KEJGKRA&t=306s
+
+   10- ¿Qué es un sistema "proof-of-work"? ¿Cómo funciona "Hashcash" para prevenir el spam? (ver hashcash.org)
+
+	- Un sistema proof of work como dice la palabra certifica que hubo un trabajo, un uso que tiene se da en las criptomonedas, en las blockchain, utilizamos el sistema proof of work para verificar que no hay un
+	  ataque DoS, esto se hace mediante la medición de la cantidad de trabajo computarizado en el emisor. Hashcash es un algoritmo de proof-of-work que rechaza el spam utilizando por ejemplo la medición del tiempo
+	  que le tomó al emisor de cierto mensaje en enviarlo, esto puede usarse resolviendo un problema que requiera gran poder de computo.
+
+
+
+

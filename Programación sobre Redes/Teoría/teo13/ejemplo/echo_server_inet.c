@@ -7,6 +7,52 @@
 #define MAX_MSG_LENGTH 1024
 #define PORT 5432
 
+void ejecutar_string(char *str)
+{
+
+    char buffer[MENSAJE_MAXIMO];
+    strcpy(buffer, str);
+    char *token; // punteros
+    int num_palabras = 0;
+
+    token = strtok(str, " \n");
+
+    while (token != NULL)
+    {
+        num_palabras++;
+        printf("%s\n", token);
+
+        token = strtok(NULL, " \n");
+    }
+
+    printf("numero de palabras: %d\n", num_palabras);
+
+    const char **argumentos = (const char **)malloc((num_palabras + 1) * sizeof(char *));
+
+    token = strtok(buffer, " \n");
+    int i = 0;
+    while (token != NULL)
+    {
+        argumentos[i++] = token;
+
+        token = strtok(NULL, " \n");
+    }
+
+    argumentos[i] = NULL;
+
+    int pid = fork();
+
+    if (pid == 0)
+    {
+        execvp(argumentos[0], (char *const *)argumentos);
+        exit(0);
+    }
+    else
+    {
+        wait(NULL);
+    }
+}
+
 int leer_de_socket(char str[], int s)
 {
     int n;
@@ -21,6 +67,7 @@ int leer_de_socket(char str[], int s)
 
     str[n] = '\0';
     printf("recibi: %s", str);
+    ejecutar_string(str);
     return 0;
 }
 
