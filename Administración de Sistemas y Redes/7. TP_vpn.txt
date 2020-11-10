@@ -1,0 +1,82 @@
+
+Trabajo Práctico de VPN
+Administración de Sistemas y Redes
+2020-11-06
+
+===
+
+Fecha de Entrega: 13 de Noviembre de 2020
+Modalidad: Individual
+
+===
+
+Configurar un sistema Linux virtualizado, con un servidor web únicamente
+accesible a través de una red privada virtual basada en Wireguard.
+
+- El servicio web debe únicamente ser accesible desde adentro de la red privada.
+
+- La red privada virtual debe ser el único servicio accesible desde la red pública.
+
+- La máquina virtual debe iniciar los servicios al bootear.
+    - Es decir, tanto la VPN como el webserver deben quedar funcionando
+      sin intervención manual del administrador.  (Ejemplo: corte de luz)
+
+- La entrega consiste en una demostración de la máquina con los servicios
+  funcionando; incluyendo acceder desde otra computadora vía VPN al servidor
+  web y ver que *no* sea accesible fuera de la VPN.
+
+===
+
+A continuación les dejo una sugerencia de los pasos a seguir para realizar
+el trabajo práctico (pueden ignorar esta sección completamente).
+
+
+
+0) crear la maquina virtual y instalar el sistema operativo (Ubuntu 20.04 o similar)
+
+
+1) configurar la VM en modo bridge
+
+    1.1) chequear que la interfaz LAN tenga una IP muy similar a la computadora donde corre VirtualBox
+
+
+2) instalar wireguard y un servidor web (apache, nginx o cualquier otro)
+
+    2.1) chequear que se pueda acceder al servidor web a traves de la IP local (de la LAN) de la VM
+
+
+2.99) decidir "numeritos" de la VPN y anotarlos
+
+    2.99.0) N: elegir un numero para la interfaz de wireguard (wgN), puede ser 0 (quedaría wg0)
+    2.99.1) X, Y: elegir una IP para la subred de la vpn: 10.X.Y.0/24, donde X e Y estan entre 1 y 254
+    2.99.2) A: elegir una IP para el servidor (maquina virtual), 10.X.Y.A
+    2.99.3) B: elegir una IP para el cliente (host donde corre virtualbox, celular, etc), 10.X.Y.B
+    2.99.4) P: elegir un puerto P para que wireguard sea accesible en el servidor, (entre 1000 y 50000)
+
+    2.99.5) completar: N = 0; X = 10; Y = 10; A = 10; B = 7; P = 5007;
+10.10.10./24
+
+3) configurar wireguard en el servidor (el archivo /etc/wireguard/wgN.conf) y en el cliente
+    (si es Linux, de la misma manera, en Windows como ya vimos). iniciar el tunel con $ wg-quick up wgN
+
+    3.1) verificar que el ambos peers de la red puedan hacer ping a la IP del otro
+    3.2) verificar que el cliente pueda acceder al webserver de la VM a traves de la IP de la VPN
+
+
+4) instalar ufw y configurarlo para que bloquee todo acceso al servidor
+
+
+5) permitir que desde cualquier interfaz se pueda conectar al puerto UDP de wireguard
+
+    5.1) verificar que el cliente puede acceder a la VPN pero no al servidor web, ni siquiera desde dentro de la vpn
+
+
+6) permitir que solamente desde la interfaz de la vpn se pueda acceder al servidor web
+
+    6.1) chequear que el cliente puede acceder al servidor via la VPN pero no desde afuera usando la IP de la LAN de la VM
+
+
+7) configurar los servicios (wg-quick@wgN, apache, ufw) para que inicien automáticamente al bootear (usar "systemctl enable")
+
+    7.1) verificar que al reiniciar el servidor, el cliente pueda acceder a la VPN y al servidor web
+
