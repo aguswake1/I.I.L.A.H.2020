@@ -26,7 +26,6 @@
 
 using namespace std;
 int leer_de_socket(int s, char buf[]);
-vector<string> split(const string &str, const string &delim);
 
 struct Client
 {

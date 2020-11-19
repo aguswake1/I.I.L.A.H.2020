@@ -52,7 +52,7 @@ void connection_handler(int socket_desc)
         /* COMPLETAR */
     }
 
-    return NULL;
+    //return NULL;
 }
 
 int connection_setup()
@@ -61,13 +61,37 @@ int connection_setup()
     int listening_socket;
 
     /* Crear un socket de dominio INET con TCP (SOCK_STREAM).  */
-    /* COMPLETAR */
+
+    listening_socket = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (listening_socket == -1)
+    {
+        perror("No se pudo crear el socket :(");
+        exit(1);
+    }
 
     /* Establecer la dirección a la cual conectarse para escuchar. */
-    /* COMPLETAR */
+    struct sockaddr_in server;
+
+    server.sin_family = AF_INET;
+    server.sin_port = htons(5007);
+
+    // Se utiliza INADDR_ANY para que el ejecutable no restrinja la dirección por la que se puede llamar al servidor.
+    server.sin_addr.s_addr = INADDR_ANY;
+
+    if (bind(listening_socket, (struct sockaddr *)&server, sizeof(server)) < 0)
+    {
+        perror("No se pudo hacer el bind correctamente :(");
+        exit(1);
+    }
 
     /* Escuchar en el socket y permitir 5 conexiones en espera. */
-    /* COMPLETAR */
+
+    if (listen(listening_socket, 5) < 0)
+    {
+        perror("No se pudo escuchar en el socket :(");
+        exit(1);
+    }
 
     printf("Server is on! \n");
     return listening_socket;
@@ -77,22 +101,26 @@ int main(void)
 {
 
     // Abrimos un socket para escuchar conexiones entrantes
-    int s = connection_setup();
+    int server_socket = connection_setup();
+
+    int new_socket;
+    int auxiliar = sizeof(struct sockaddr_in);
+    struct sockaddr_in client;
 
     while (1)
     {
 
         // Main loop del servidor
         // Aqui se aceptan conexiones y handlea a cada cliente a partir de un thread
-
-        /* COMPLETAR */
+        printf("Esperando conexion...\n");
+        new_socket = accept(server_socket, (struct sockaddr *)&client, (socklen_t *)&auxiliar);
     }
 
     /* Cerramos las conexiones pendientes. */
     /* COMPLETAR */
 
     /* Cerramos la conexión que escucha. */
-    close(s);
+    close(server_socket);
 
     return 0;
 }

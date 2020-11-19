@@ -21,8 +21,3 @@ int leer_de_socket(int s, char buf[])
 
 /* Dado un string y un delimitador como " ", devuelve un vector de strings donde los elementos son los tokens que
    resultan de la separación segun el delimitador. */
-
-vector<string> split(const string &str, const string &delim)
-{
-    /* COMPLETAR */
-}

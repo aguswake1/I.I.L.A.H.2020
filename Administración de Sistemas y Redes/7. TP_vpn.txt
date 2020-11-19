@@ -59,7 +59,7 @@ el trabajo práctico (pueden ignorar esta sección completamente).
 3) configurar wireguard en el servidor (el archivo /etc/wireguard/wgN.conf) y en el cliente
     (si es Linux, de la misma manera, en Windows como ya vimos). iniciar el tunel con $ wg-quick up wgN
 
-    3.1) verificar que el ambos peers de la red puedan hacer ping a la IP del otro
+    3.1) verificar que el cliente pueda hacer ping a la IP del servidor a traves de la IP de la VPN (no hay problema si al hacer ping desde el servidor a un cliente windows no se reciben respuestas)
     3.2) verificar que el cliente pueda acceder al webserver de la VM a traves de la IP de la VPN
 
 
